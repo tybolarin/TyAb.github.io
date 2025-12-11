@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oluwatoyin Abolarin | Healthcare Cybersecurity Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #0a4d3c 0%, #1a5f7a 50%, #0d47a1 100%);
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(10, 20, 30, 0.95);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 255, 136, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #00ff88;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: rgba(0, 255, 136, 0.2);
+            transform: translateY(-2px);
+            color: #00ffaa;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(10, 77, 60, 0.9));
+            border-bottom: 3px solid #00ff88;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00ff88, #0d47a1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #0a1929;
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.4);
+            border: 5px solid rgba(0, 255, 136, 0.3);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: #00ff88;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #b0bec5;
+            max-width: 800px;
+            margin: 1rem auto;
+            line-height: 1.8;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(0, 255, 136, 0.1);
+            border-radius: 10px;
+            border: 2px solid rgba(0, 255, 136, 0.3);
+            min-width: 150px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: #00ff88;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00ff88;
+        }
+
+        .stat-label {
+            color: #b0bec5;
+            margin-top: 0.5rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Section Styles */
+        section {
+            background: rgba(15, 30, 45, 0.8);
+            margin: 2rem 0;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            color: #00ff88;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #00ff88;
+            display: inline-block;
+        }
+
+        h3 {
+            color: #64b5f6;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .about-item {
+            background: rgba(0, 255, 136, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #00ff88;
+        }
+
+        .about-item strong {
+            color: #00ff88;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: rgba(0, 255, 136, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 255, 136, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            border-color: #00ff88;
+            box-shadow: 0 8px 20px rgba(0, 255, 136, 0.2);
+        }
+
+        .skill-category h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            color: #b0bec5;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-list li:before {
+            content: "▸";
+            color: #00ff88;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Experience Cards */
+        .experience-card {
+            background: rgba(0, 255, 136, 0.05);
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            border-left: 5px solid #00ff88;
+            transition: all 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateX(10px);
+            box-shadow: -5px 0 20px rgba(0, 255, 136, 0.2);
+        }
+
+        .experience-title {
+            color: #00ff88;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-org {
+            color: #64b5f6;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-date {
+            color: #90a4ae;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(13, 71, 161, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(0, 255, 136, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: #00ff88;
+            box-shadow: 0 12px 30px rgba(0, 255, 136, 0.3);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: #00ff88;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: rgba(0, 255, 136, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #00ff88;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            background: rgba(0, 255, 136, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 255, 136, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            border-color: #00ff88;
+            transform: scale(1.05);
+        }
+
+        .cert-badge {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-name {
+            color: #00ff88;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-status {
+            color: #64b5f6;
+            font-size: 0.9rem;
+        }
+
+        /* Role Model Section */
+        .role-model {
+            background: linear-gradient(135deg, rgba(13, 71, 161, 0.2), rgba(10, 77, 60, 0.2));
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #00ff88;
+            margin-top: 2rem;
+        }
+
+        .quote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #64b5f6;
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            border-left: 4px solid #00ff88;
+            line-height: 1.8;
+        }
+
+        .quote-author {
+            color: #00ff88;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Word Cloud */
+        .word-cloud {
+            background: rgba(0, 255, 136, 0.05);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 2rem;
+            border: 2px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .word-cloud-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .word {
+            color: #00ff88;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 255, 136, 0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .word:hover {
+            transform: scale(1.2);
+            background: rgba(0, 255, 136, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+        }
+
+        .word-large { font-size: 1.8rem; }
+        .word-medium { font-size: 1.3rem; }
+        .word-small { font-size: 1rem; }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background: rgba(0, 255, 136, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid rgba(0, 255, 136, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            border-color: #00ff88;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 255, 136, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item a {
+            color: #64b5f6;
+            text-decoration: none;
+            word-break: break-all;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #00ff88;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 20, 30, 0.95);
+            color: #b0bec5;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 3px solid #00ff88;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .hero { padding: 2rem 1rem; }
+            nav ul { flex-direction: column; gap: 1rem; }
+            .stats { flex-direction: column; gap: 1rem; }
+            section { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#inspiration">Inspiration</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="profile-container">
+            <div class="profile-photo">OA</div>
+            <div>
+                <h1>Oluwatoyin Abolarin</h1>
+                <p class="tagline">Healthcare Cybersecurity Specialist | Patient Safety Through Digital Security</p>
+                <p class="hero-subtitle">
+                    Passionate about protecting patient data and medical systems where security directly impacts lives. 
+                    Combining technical expertise with a deep commitment to healthcare security compliance and patient safety.
+                </p>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">2+</div>
+                <div class="stat-label">Certifications</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Active Projects</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Competitions</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Organizations</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-item">
+                    <strong>🎓 Education</strong>
+                    Associate of Science in Computer Information Systems and Networking<br>
+                    Major: Cybersecurity<br>
+                    Houston Community College (HCC)
+                </div>
+                <div class="about-item">
+                    <strong>🎯 Career Focus</strong>
+                    Healthcare cybersecurity roles including Healthcare Information Security Officer, HIPAA Compliance Specialist, 
+                    Medical Device Security Specialist, EHR Security Analyst, and Healthcare Penetration Tester
+                </div>
+                <div class="about-item">
+                    <strong>💡 What Drives Me</strong>
+                    I'm drawn to healthcare cybersecurity because it directly impacts patient safety and protecting people's most 
+                    sensitive information. The challenge of balancing digital security with the life-critical nature of medical 
+                    systems really motivates me.
+                </div>
+                <div class="about-item">
+                    <strong>📍 Location</strong>
+                    Houston, Texas, United States
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technical Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>💻 Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python (Proficient)</li>
+                        <li>Swift (Proficient)</li>
+                        <li>JavaScript (Learning)</li>
+                        <li>C++ (Learning)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔧 Security Tools</h3>
+                    <ul class="skill-list">
+                        <li>Wireshark - Network Analysis</li>
+                        <li>Nmap - Network Scanning</li>
+                        <li>Metasploit - Penetration Testing</li>
+                        <li>NETLAB+ Virtual Lab Platform</li>
+                        <li>XP Cyber Range</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💾 Operating Systems</h3>
+                    <ul class="skill-list">
+                        <li>Windows</li>
+                        <li>Linux</li>
+                        <li>Kali Linux</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🏥 Healthcare Security Focus</h3>
+                    <ul class="skill-list">
+                        <li>HIPAA Compliance</li>
+                        <li>Medical Device Security</li>
+                        <li>EHR Systems Protection</li>
+                        <li>Patient Data Privacy</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🌐 Networking</h3>
+                    <ul class="skill-list">
+                        <li>Network Segmentation</li>
+                        <li>Firewall Configuration</li>
+                        <li>VLAN Implementation</li>
+                        <li>Switch Management</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔍 Security Practices</h3>
+                    <ul class="skill-list">
+                        <li>Vulnerability Assessment</li>
+                        <li>Penetration Testing</li>
+                        <li>Threat Intelligence</li>
+                        <li>Incident Response</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Professional Experience & Involvement</h2>
+
+            <h3>💼 Work Experience</h3>
+            <div class="experience-card">
+                <div class="experience-title">Oracle Intern</div>
+                <div class="experience-org">Oracle Corporation</div>
+                <div class="experience-date">Recent Experience</div>
+                <p>Gained valuable industry experience working with enterprise technology solutions and security practices.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-title">Technology Volunteer</div>
+                <div class="experience-org">Non-Governmental Organisations (NGO)</div>
+                <p>Contributed technical expertise to support humanitarian and community-focused initiatives.</p>
+            </div>
+
+            <h3>🏆 Competitions & Challenges</h3>
+            <div class="experience-card">
+                <div class="experience-title">National Cyber League (NCL) Competition</div>
+                <div class="experience-date">Fall 2025</div>
+                <p>Participating in one of the premier cybersecurity competitions, testing skills in real-world scenarios.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-title">XP Cyber Range Security Challenge</div>
+                <p>Engaged in hands-on cybersecurity challenges in simulated environments, developing practical attack and defense skills.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-title">NETLAB+ Virtual Lab Platform</div>
+                <p>Extensive hands-on practice with networking and security configurations in virtual environments.</p>
+            </div>
+
+            <h3>👥 Organizations & Leadership</h3>
+            <div class="experience-card">
+                <div class="experience-title">Member - Women in Technology</div>
+                <div class="experience-org">HCC Chapter</div>
+                <p>Active participant in promoting diversity and empowerment in technology fields, networking with fellow women in tech.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-title">Member - Coding Club</div>
+                <div class="experience-org">Houston Community College</div>
+                <p>Collaborative programming and development projects, sharing knowledge and building coding skills.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-title">Member - HCC Cyber Club</div>
+                <div class="experience-org">Houston Community College</div>
+                <p>Engaged in cybersecurity discussions, CTF competitions, and security awareness initiatives.</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects & Research</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>🌐 GitHub Cybersecurity Portfolio</h3>
+                    <p>Comprehensive professional portfolio showcasing cybersecurity skills, projects, and career journey. Built with modern web technologies and security best practices.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">GitHub Pages</span>
+                        <span class="tech-tag">Portfolio Design</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🔒 Home Network Segmentation Lab</h3>
+                    <p>Personal project implementing network segmentation using a home switch to create separate network segments with firewall-like security. Demonstrates practical understanding of network isolation and security boundaries.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">VLANs</span>
+                        <span class="tech-tag">Network Security</span>
+                        <span class="tech-tag">Firewall Rules</span>
+                        <span class="tech-tag">Switch Configuration</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🎯 National Cyber League CTF Writeups</h3>
+                    <p>Detailed documentation of CTF challenges and solutions from the National Cyber League competition. Working through challenges to learn about vulnerabilities and documenting concepts to reinforce understanding.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Vulnerability Analysis</span>
+                        <span class="tech-tag">CTF</span>
+                        <span class="tech-tag">Technical Writing</span>
+                        <span class="tech-tag">Research</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🏥 Healthcare Security Research</h3>
+                    <p>Ongoing research into medical device security, HIPAA compliance frameworks, and EHR system vulnerabilities. Focus on understanding the intersection of cybersecurity and patient safety.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HIPAA</span>
+                        <span class="tech-tag">Medical Devices</span>
+                        <span class="tech-tag">Compliance</span>
+                        <span class="tech-tag">Healthcare IT</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🛡️ Virtual Lab Security Configurations</h3>
+                    <p>Hands-on practice with various security configurations, network hardening, and security policy implementations using NETLAB+ and XP Cyber Range platforms.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Network Hardening</span>
+                        <span class="tech-tag">Security Policies</span>
+                        <span class="tech-tag">Virtual Labs</span>
+                        <span class="tech-tag">Configuration Management</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <h2>Certifications & Credentials</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-badge">✅</div>
+                    <div class="cert-name">CompTIA Network+</div>
+                    <div class="cert-status">Certified - 2024</div>
+                    <p style="color: #90a4ae; margin-top: 1rem; font-size: 0.9rem;">
+                        Validates networking knowledge including network troubleshooting, configuration, and management
+                    </p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-badge">⏳</div>
+                    <div class="cert-name">CompTIA Security+</div>
+                    <div class="cert-status">In Progress - 2025</div>
+                    <p style="color: #90a4ae; margin-top: 1rem; font-size: 0.9rem;">
+                        Industry-standard certification for cybersecurity fundamentals and best practices
+                    </p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-badge">🎯</div>
+                    <div class="cert-name">NETLAB+ Platform</div>
+                    <div class="cert-status">Training Completed</div>
+                    <p style="color: #90a4ae; margin-top: 1rem; font-size: 0.9rem;">
+                        Hands-on virtual lab experience with networking and security configurations
+                    </p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-badge">🔐</div>
+                    <div class="cert-name">XP Cyber Range</div>
+                    <div class="cert-status">Security Challenges</div>
+                    <p style="color: #90a4ae; margin-top: 1rem; font-size: 0.9rem;">
+                        Practical cybersecurity training in simulated attack and defense scenarios
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: rgba(0, 255, 136, 0.05); border-radius: 10px; border-left: 5px solid #00ff88;">
+                <h3 style="margin-top: 0; color: #00ff88;">🎯 Future Certifications Planned</h3>
+                <ul class="skill-list">
+                    <li>Certified Healthcare Information Security and Privacy Practitioner (HCISPP)</li>
+                    <li>Certified Information Systems Security Professional (CISSP)</li>
+                    <li>GIAC Security Essentials (GSEC)</li>
+                    <li>Certified Ethical Hacker (CEH)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Inspiration Section -->
+        <section id="inspiration">
+            <h2>Inspiration & Vision</h2>
+            <div class="role-model">
+                <h3 style="color: #00ff88; margin-top: 0;">Role Model: Dr. Kevin Fu</h3>
+                <p style="color: #b0bec5; margin-bottom: 1rem;">
+                    Dr. Kevin Fu's pioneering work on medical device security has fundamentally shaped how we protect patient 
+                    safety in connected healthcare systems. His research and advocacy have brought critical attention to 
+                    the life-or-death implications of cybersecurity in healthcare.
+                </p>
+                
+                <div class="quote">
+                    "Security in medical devices
